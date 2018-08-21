@@ -1,8 +1,17 @@
 import React from 'react'
+import {Route} from 'react-router-dom'
+
+import Home from './Home'
+import About from './About'
+import Projects from './Projects'
 
 const App = () => {
   return (
-    <h2>React and Redux development is ready to GOOOO!</h2>
+    <div>
+      <Route exact path='/' component={Home} />
+      <Route path='/about-me' component={About} />
+      <Route path='/projects' component={Projects} />
+    </div>
   )
 }
 
