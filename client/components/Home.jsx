@@ -6,8 +6,16 @@ class Home extends React.Component {
     return (
       <div>
         <h2>HOME COMPONENT</h2>
-        <Link to='/about-me'>About Me</Link>
-        <Link to='/projects'>Projects</Link>
+        <Link to='/about-me'>
+          <button>
+            About Me
+          </button>
+        </Link>
+        <Link to='/projects'>
+          <button>
+            Projects
+          </button>
+        </Link>
       </div>
     )
   }
