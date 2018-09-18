@@ -1,9 +1,14 @@
 import React from 'react'
 
+import Nasa from './Nasa/Nasa'
+
 class Home extends React.Component {
   render () {
     return (
-      <h2>HOME COMPONENT</h2>
+      <div>
+        <h2>HOME COMPONENT</h2>
+        <Nasa />
+      </div>
     )
   }
 }
