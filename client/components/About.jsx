@@ -1,8 +1,13 @@
 import React from 'react'
 
+import SkillSet from './SkillSet/SkillSet'
+
 const About = () => {
   return (
-    <h2>This is all about me</h2>
+    <div>
+      <h2>This is all about me</h2>
+      <SkillSet />
+    </div>
   )
 }
 
