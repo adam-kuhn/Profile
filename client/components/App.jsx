@@ -13,11 +13,8 @@ const App = () => {
     <div>
       <Nav />
       <Route exact path='/' component={Home} />
-      <div className='test'>
-        <Route path='/about-me' component={About} />
-      </div>
+      <Route path='/about-me' component={About} />
       <Route path='/projects' component={Projects} />
-      <p className='test'>I should be orange</p>
     </div>
   )
 }
