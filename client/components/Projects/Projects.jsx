@@ -20,6 +20,13 @@ const Projects = () => {
         live={false}
         code='https://github.com/adam-kuhn/race-fuel'
       />
+      <StandardProject
+        title='OCR WOD Generator'
+        image='/images/wodgenerator_scr-shot.png'
+        desc='Produces a workout...'
+        live='https://ocr-trainer.herokuapp.com/'
+        code='https://github.com/adam-kuhn/workout-generator'
+      />
     </div>
   )
 }
