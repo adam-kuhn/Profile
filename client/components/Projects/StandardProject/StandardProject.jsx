@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../projects.css'
+import './standard-project.css'
 
 const StandardProject = (props) => {
   const {title, image, desc, live, code} = props

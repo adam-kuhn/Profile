@@ -1,6 +1,6 @@
 import React from 'react'
 
-import StandardProject from './Projects/StandardProj/StandardProj'
+import StandardProject from './StandardProject/StandardProject'
 
 const Projects = () => {
   return (
