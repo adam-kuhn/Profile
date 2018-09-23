@@ -27,6 +27,13 @@ const Projects = () => {
         live='https://ocr-trainer.herokuapp.com/'
         code='https://github.com/adam-kuhn/workout-generator'
       />
+      <StandardProject
+        title='Audio Player'
+        image='/images/audioplayer_scr-shot.png'
+        desc='A audio player built with React...'
+        live={false}
+        code='https://github.com/adam-kuhn/Audio-Player'
+      />
     </div>
   )
 }
