@@ -4,5 +4,6 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(#151419, #74e474c7, #151419)
+  background-image: linear-gradient(#151419, #74e474c7, #151419);
+  color: #97929e;
 }
