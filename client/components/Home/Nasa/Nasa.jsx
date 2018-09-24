@@ -3,6 +3,8 @@ import request from 'superagent'
 
 import Waiting from '../../Waiting/Waiting'
 
+import './nasa.css'
+
 class Nasa extends React.Component {
   constructor () {
     super()
@@ -27,7 +29,7 @@ class Nasa extends React.Component {
     const {date, explanation, title, media_type, url} = this.state.nasa
     if (this.state.infoRetrieved) {
       return (
-        <div>
+        <div className='container-vert'>
           <h3>{title}</h3>
           {media_type === 'video'
             ? <iframe src={url}/>
