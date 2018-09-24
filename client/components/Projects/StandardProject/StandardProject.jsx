@@ -5,7 +5,7 @@ import './standard-project.css'
 const StandardProject = (props) => {
   const {title, image, desc, live, code} = props
   return (
-    <div className='proj'>
+    <div className='container-vert'>
       <h3>{title}</h3>
       <img className='proj-img' src={image} />
       <p>{desc}</p>
