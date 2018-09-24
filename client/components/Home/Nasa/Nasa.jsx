@@ -1,6 +1,8 @@
 import React from 'react'
 import request from 'superagent'
 
+import Waiting from '../../Waiting/Waiting'
+
 class Nasa extends React.Component {
   constructor () {
     super()
@@ -35,7 +37,7 @@ class Nasa extends React.Component {
         </div>
       )
     } else {
-      return (<p>Fetching cool things</p>)
+      return (<Waiting />)
     }
   }
 }
