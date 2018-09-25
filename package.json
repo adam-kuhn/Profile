@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate",
+  "name": "profile",
   "version": "1.0.0",
   "main": "server/index.js",
   "scripts": {
@@ -7,7 +7,7 @@
     "dev": "nodemon --watch server & webpack --watch",
     "test": "jest --watch --noStackTrace"
   },
-  "description": "boilerplate set up for react and redux development",
+  "description": "profile, showcasing some of my projects and skills",
   "repository": "https://github.com/adam-kuhn/boilerplate.git",
   "author": "adam-kuhn <adam.kuhn20@gmail.com>",
   "license": "MIT",
@@ -28,6 +28,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "babel-register": "^6.26.0",
+    "css-loader": "^1.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.4.3",
@@ -40,7 +41,9 @@
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0",
     "superagent": "^4.0.0-beta.5",
-    "webpack": "^3.11.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.3"
   }
 }
