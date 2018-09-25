@@ -1,9 +1,3 @@
-.proj {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .proj-img {
   width: 80%;
   border-radius: 0.3rem;
