@@ -5,7 +5,8 @@
   "scripts": {
     "start": "webpack && node server",
     "dev": "nodemon --watch server & webpack --watch",
-    "test": "jest --watch --noStackTrace"
+    "test": "jest --watch --noStackTrace",
+    "knex": "knex"
   },
   "description": "profile, showcasing some of my projects and skills",
   "repository": "https://github.com/adam-kuhn/boilerplate.git",
