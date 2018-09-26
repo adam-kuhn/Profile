@@ -1,5 +1,8 @@
 import React from 'react'
 import request from 'superagent'
+import {connect} from 'react-redux'
+
+import {getTechSkills} from '../../../actions/skills'
 
 class SkillSet extends React.Component {
   constructor () {
@@ -9,7 +12,7 @@ class SkillSet extends React.Component {
   }
 
   handleTech () {
-    console.log('I will fetch tech skills one day')
+    this.props.dispatch(getTechSkills())
   }
 
   handleSoft () {
@@ -27,4 +30,4 @@ class SkillSet extends React.Component {
   }
 }
 
-export default SkillSet
+export default connect()(SkillSet)
