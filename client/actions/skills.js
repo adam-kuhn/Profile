@@ -1,9 +1,13 @@
 import request from 'superagent'
 
 export const GET_TECH_SKILLS = 'GET_TECH_SKILLS'
+export const SET_TECH_SKILLS = 'SET_TECH_SKILLS'
 
-const setTechSkills = () => {
-
+const setTechSkills = (skills) => {
+  return {
+    type: SET_TECH_SKILLS,
+    skills
+  }
 }
 
 export const getTechSkills = () => {
@@ -11,8 +15,7 @@ export const getTechSkills = () => {
     request
       .get('/api/v1/tech-skills')
       .then(skills => {
-        // do stuff
-        dispatch(setTechSkills())
+        dispatch(setTechSkills(skills.body))
       })
   }
 }
