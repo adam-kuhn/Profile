@@ -6,9 +6,6 @@ const getTechSkills = (testDb) => {
   const db = testDb || connection
   return db('Tech Skills')
     .select('skill', 'description', 'rating')
-    .catch(err => {
-      console.error(err)
-    })
 }
 
 module.exports = {
