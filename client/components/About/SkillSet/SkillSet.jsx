@@ -24,14 +24,17 @@ class SkillSet extends React.Component {
         <p>My Skills are being held in a database. Press the button to access my skills</p>
         <button type='button' onClick={this.handleTech}>Fetch Tech Skills</button>
         <button type='button' onClick={this.handleSoft}>Fetch Soft Skills</button>
-        {this.props.skills.map(skill => {
-          return (
-            <div key={skill.id}>
-              <li>{skill.skill}: {skill.description}</li>
-              <p>{skill.rating} / 5</p>
-            </div>
-          )
-        })}
+        <ul>
+          {this.props.skills.map(skill => {
+            return (
+              <li key={skill.id}>
+                <p>{skill.skill}: {skill.rating} / 5</p>
+                <p>{skill.description}</p>
+              </li>
+            )
+          })}
+        </ul>
+
       </div>
     )
   }
