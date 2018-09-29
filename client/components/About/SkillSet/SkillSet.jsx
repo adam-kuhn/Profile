@@ -6,12 +6,18 @@ import {getTechSkills} from '../../../actions/skills'
 class SkillSet extends React.Component {
   constructor () {
     super()
+    this.state = {
+      skillType: ''
+    }
     this.handleTech = this.handleTech.bind(this)
     this.handleSoft = this.handleSoft.bind(this)
   }
 
   handleTech () {
     this.props.dispatch(getTechSkills())
+    this.setState({
+      skillType: 'Tech Skills'
+    })
   }
 
   handleSoft () {
@@ -39,6 +45,7 @@ class SkillSet extends React.Component {
         <button type='button' onClick={this.handleSoft}>
           Fetch Soft Skills
         </button>
+        <h2>{this.state.skillType}</h2>
         <ul>
           {this.props.skills.map(skill => {
             return (
