@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 
-import generic from './generic'
+import skillSet from './skillSet'
 
 export default combineReducers({
-  generic
+  skillSet
 })
