@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
+import StarRating from './StarRating/StarRating'
 import {getTechSkills} from '../../../actions/skills'
 
 class SkillSet extends React.Component {
@@ -50,7 +51,7 @@ class SkillSet extends React.Component {
           {this.props.skills.map(skill => {
             return (
               <li key={skill.id}>
-                <p>{skill.skill}: {skill.rating} / 5</p>
+                <p>{skill.skill}: <StarRating stars={skill.rating} /></p>
                 <p>{skill.description}</p>
               </li>
             )
