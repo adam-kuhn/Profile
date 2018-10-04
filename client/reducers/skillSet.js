@@ -1,4 +1,4 @@
-import {SET_TECH_SKILLS} from '../actions/skills'
+import {SET_SKILLS} from '../actions/skills'
 
 const initialState = {
   skills: []
@@ -6,7 +6,7 @@ const initialState = {
 
 function skillSet (state = initialState, action) {
   switch (action.type) {
-    case (SET_TECH_SKILLS): {
+    case (SET_SKILLS): {
       return {skills: action.skills}
     }
     default: {

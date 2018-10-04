@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import StarRating from './StarRating/StarRating'
-import {getTechSkills} from '../../../actions/skills'
+import {getTechSkills, getSoftSkills} from '../../../actions/skills'
 
 class SkillSet extends React.Component {
   constructor () {
@@ -22,7 +22,10 @@ class SkillSet extends React.Component {
   }
 
   handleSoft () {
-    console.log('I will fetch soft skills one day')
+    this.props.dispatch(getSoftSkills())
+    this.setState({
+      skillType: 'Soft Skills'
+    })
   }
 
   render () {
