@@ -9,20 +9,12 @@ const setSkills = (skills) => {
   }
 }
 
-export const getTechSkills = () => {
+export const getSkills = (skillType) => {
   return dispatch => {
     request
-      .get('/api/v1/tech-skills')
-      .then(skills => {
-        dispatch(setSkills(skills.body))
-      })
-  }
-}
-
-export const getSoftSkills = () => {
-  return dispatch => {
-    request
-      .get('api/v1/soft-skills')
+      .post('/api/v1/skills')
+      .set('Content-Type', 'application/json')
+      .send({skillType})
       .then(skills => {
         dispatch(setSkills(skills.body))
       })
