@@ -5,7 +5,7 @@ const connection = require('knex')(config)
 const getTechSkills = (testDb) => {
   const db = testDb || connection
   return db('Tech Skills')
-    .select('skill', 'description', 'rating')
+    .select('id', 'skill', 'description', 'rating')
 }
 
 module.exports = {
