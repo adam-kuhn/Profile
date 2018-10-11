@@ -17,14 +17,14 @@ const Projects = () => {
         title='Race Fuel'
         image='/images/racefuel_scr-shot.png'
         desc='Race Fuel allows racers to track nutrtion through long endurance events...'
-        live={false}
+        live='http://race-fuel.herokuapp.com/#/'
         code='https://github.com/adam-kuhn/race-fuel'
       />
       <StandardProject
         title='OCR WOD Generator'
         image='/images/wodgenerator_scr-shot.png'
         desc='Produces a workout...'
-        live='https://ocr-trainer.herokuapp.com/'
+        live={false}
         code='https://github.com/adam-kuhn/workout-generator'
       />
       <StandardProject
