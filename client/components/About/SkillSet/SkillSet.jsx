@@ -1,7 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import {getTechSkills} from '../../../actions/skills'
+import StarRating from './StarRating/StarRating'
+import {getSkills} from '../../../actions/skills'
+
+const soft = 'Soft Skills'
+const tech = 'Tech Skills'
 
 class SkillSet extends React.Component {
   constructor () {
@@ -9,19 +13,15 @@ class SkillSet extends React.Component {
     this.state = {
       skillType: ''
     }
-    this.handleTech = this.handleTech.bind(this)
-    this.handleSoft = this.handleSoft.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  handleTech () {
-    this.props.dispatch(getTechSkills())
+  handleClick (e) {
+    const skillType = e.target.value
+    this.props.dispatch(getSkills(skillType))
     this.setState({
-      skillType: 'Tech Skills'
+      skillType
     })
-  }
-
-  handleSoft () {
-    console.log('I will fetch soft skills one day')
   }
 
   render () {
@@ -39,18 +39,18 @@ class SkillSet extends React.Component {
           them and I am always learning and growing
           and I know that one day I will be a <q>Master</q>.
         </p>
-        <button type='button' onClick={this.handleTech}>
-          Fetch Tech Skills
+        <button type='button' onClick={this.handleClick} value ={tech}>
+          Fetch {tech}
         </button>
-        <button type='button' onClick={this.handleSoft}>
-          Fetch Soft Skills
+        <button type='button' onClick={this.handleClick} value={soft}>
+          Fetch {soft}
         </button>
         <h2>{this.state.skillType}</h2>
         <ul>
           {this.props.skills.map(skill => {
             return (
               <li key={skill.id}>
-                <p>{skill.skill}: {skill.rating} / 5</p>
+                <p>{skill.skill}: <StarRating stars={skill.rating} /></p>
                 <p>{skill.description}</p>
               </li>
             )

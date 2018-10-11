@@ -1,21 +1,22 @@
 import request from 'superagent'
 
-export const GET_TECH_SKILLS = 'GET_TECH_SKILLS'
-export const SET_TECH_SKILLS = 'SET_TECH_SKILLS'
+export const SET_SKILLS = 'SET_SKILLS'
 
-const setTechSkills = (skills) => {
+const setSkills = (skills) => {
   return {
-    type: SET_TECH_SKILLS,
+    type: SET_SKILLS,
     skills
   }
 }
 
-export const getTechSkills = () => {
+export const getSkills = (skillType) => {
   return dispatch => {
     request
-      .get('/api/v1/tech-skills')
+      .post('/api/v1/skills')
+      .set('Content-Type', 'application/json')
+      .send({skillType})
       .then(skills => {
-        dispatch(setTechSkills(skills.body))
+        dispatch(setSkills(skills.body))
       })
   }
 }
